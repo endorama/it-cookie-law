@@ -6,6 +6,10 @@ module.exports = function(grunt) {
                ' * v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
                ' * Author : <%= pkg.author %>\n' +
                ' * License: <%= pkg.license %>\n' +
+               ' * \n' +
+               ' * docCookies is released under GPL 3.0\n' +
+               ' * https://developer.mozilla.org/en-US/docs/Web/API/document.cookie\n' +
+               ' * http://www.gnu.org/licenses/gpl-3.0-standalone.html\n' +
                ' */\n';
 
   // Project configuration.
