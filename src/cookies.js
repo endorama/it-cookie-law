@@ -1,5 +1,4 @@
-(function (window) {
-  'use strict';
+(function () {
   
   /*\
   |*|
@@ -64,7 +63,6 @@
       return aKeys;
     }
   };
+  
+})(); 
 
-  window.docCookies = docCookies;
-   
-})(window); 
