@@ -26,7 +26,7 @@
   var defaults = {
     banner: {
       content: 'Questo sito utilizza cookie per inviarti pubblicità e servizi in linea con le tue preferenze. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie {{clicca qui}}. Chiudendo questo banner, scorrendo questa pagina o cliccando qualunque suo elemento acconsenti all\'uso dei cookie.',
-      moreLink: 'http://google.it',
+      moreLink: '',
       styles: {
         background: 'black',
         color: 'white',
