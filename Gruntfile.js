@@ -41,7 +41,7 @@ module.exports = function(grunt) {
     },
     'release-it': {
       options: {
-        'dry-run': true,
+        // 'dry-run': true,
         pkgFiles: ['package.json', 'bower.json'],
         commitMessage: 'Release v%s',
         tagName: 'v%s',

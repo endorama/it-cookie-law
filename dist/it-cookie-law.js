@@ -1,7 +1,7 @@
 /**
  * it-cookie-law
  * 
- * v0.0.1 - 2015-06-22
+ * v0.0.2 - 2015-06-22
  * Author : Edoardo Tenani
  * License: MIT
  */
@@ -102,7 +102,7 @@
   var defaults = {
     banner: {
       content: 'Questo sito utilizza cookie per inviarti pubblicità e servizi in linea con le tue preferenze. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie {{clicca qui}}. Chiudendo questo banner, scorrendo questa pagina o cliccando qualunque suo elemento acconsenti all\'uso dei cookie.',
-      moreLink: 'http://google.it',
+      moreLink: '',
       styles: {
         background: 'black',
         color: 'white',
@@ -253,7 +253,13 @@
 
   function setProfileCookie () {
     // 1 year is the maximum duration for cookies for EU law
-    var expirationDate = new Date().setYear(new Date().getFullYear() + 1);
+    var expirationDate;
+    if (window.cookieLawOptions.cookieDuration) {
+      expirationDate = window.cookieLawOptions.cookieDuration;
+    }
+    else {
+      expirationDate = new Date().setYear(new Date().getFullYear() + 1);
+    }
     // save cookie
     docCookies.setItem('doNotProfile', 0, new Date(expirationDate));
   }
