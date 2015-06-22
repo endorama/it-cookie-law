@@ -1,7 +1,7 @@
 /**
  * it-cookie-law
  * 
- * v0.1.2 - 2015-06-22
+ * v0.1.3 - 2015-06-22
  * Author : Edoardo Tenani
  * License: MIT
  * 
@@ -123,7 +123,6 @@
     button: {
       content: 'Chiudi',
       styles: {
-        color: 'white',
         position: 'absolute',
         bottom: '0',
         right: '0',
@@ -168,7 +167,6 @@
     var a = document.createElement('a');
     a.setAttribute('id', this.id + '-close');
     a.setAttribute('href', '#');
-    a.style.color    = this.options.button.styles.color;
     a.style.position = this.options.button.styles.position;
     a.style.bottom   = this.options.button.styles.bottom;
     a.style.right    = this.options.button.styles.right;
