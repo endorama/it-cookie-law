@@ -57,7 +57,6 @@ defaults = {
   button: {
     content: 'Chiudi',
     styles: {
-      color: 'white',
       position: 'absolute',
       bottom: '0',
       right: '0',

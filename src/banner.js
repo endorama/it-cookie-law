@@ -42,7 +42,6 @@
     button: {
       content: 'Chiudi',
       styles: {
-        color: 'white',
         position: 'absolute',
         bottom: '0',
         right: '0',
@@ -87,7 +86,6 @@
     var a = document.createElement('a');
     a.setAttribute('id', this.id + '-close');
     a.setAttribute('href', '#');
-    a.style.color    = this.options.button.styles.color;
     a.style.position = this.options.button.styles.position;
     a.style.bottom   = this.options.button.styles.bottom;
     a.style.right    = this.options.button.styles.right;
