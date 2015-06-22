@@ -42,7 +42,13 @@
 
   function setProfileCookie () {
     // 1 year is the maximum duration for cookies for EU law
-    var expirationDate = new Date().setYear(new Date().getFullYear() + 1);
+    var expirationDate;
+    if (window.cookieLawOptions.cookieDuration) {
+      expirationDate = window.cookieLawOptions.cookieDuration;
+    }
+    else {
+      expirationDate = new Date().setYear(new Date().getFullYear() + 1);
+    }
     // save cookie
     docCookies.setItem('doNotProfile', 0, new Date(expirationDate));
   }
