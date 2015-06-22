@@ -1,4 +1,4 @@
-(function () {
+(function (window) {
   
   /*\
   |*|
@@ -63,6 +63,7 @@
       return aKeys;
     }
   };
+  window.docCookies = docCookies;
   
-})(); 
+})(window); 
 
