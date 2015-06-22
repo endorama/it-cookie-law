@@ -13,7 +13,7 @@
    * @return {[type]} [description]
    */
   var actOnScroll = function () {
-    console.log('scroll!');
+    // console.log('scroll!');
     // if banner is defined
     if (banner) {
       // remove it
