@@ -1,0 +1,23 @@
+{
+  "name": "it-cookie-law",
+  "version": "0.0.1",
+  "homepage": "https://github.com/endorama/it-cookie-law",
+  "authors": [
+    "Edoardo Tenani <edoardo.tenani@gmail.com>"
+  ],
+  "description": "Banner for appliance to the European Cookie Law ( in particular for Italy )",
+  "main": "dist/it-cookie-law.min.js",
+  "keywords": [
+    "cookie",
+    "law",
+    "banner"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
