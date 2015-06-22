@@ -35,7 +35,8 @@
         left: 0,
         width: '100%',
         height: '50px',
-        margin: '1.5em'
+        margin: '1.5em',
+        zIndex: 99999
       }
     },
     button: {
@@ -74,6 +75,7 @@
     div.style.top        = this.options.banner.styles.top;
     div.style.left       = this.options.banner.styles.left;
     div.style.width      = this.options.banner.styles.width;
+    div.style.zIndex     = this.options.banner.styles.zIndex;
 
     var p = document.createElement('p');
     p.style.width  = '50%';
