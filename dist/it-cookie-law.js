@@ -1,7 +1,7 @@
 /**
  * it-cookie-law
  * 
- * v0.1.1 - 2015-06-22
+ * v0.1.2 - 2015-06-22
  * Author : Edoardo Tenani
  * License: MIT
  * 
@@ -231,7 +231,7 @@
    * @return {[type]} [description]
    */
   var actOnScroll = function () {
-    console.log('scroll!');
+    // console.log('scroll!');
     // if banner is defined
     if (banner) {
       // remove it
