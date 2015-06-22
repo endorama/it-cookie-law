@@ -38,14 +38,26 @@ module.exports = function(grunt) {
         ],
         dest: 'dist/<%= pkg.name %>.js'
       }
+    },
+    'release-it': {
+      options: {
+        'dry-run': true,
+        pkgFiles: ['package.json', 'bower.json'],
+        commitMessage: 'Release v%s',
+        tagName: 'v%s',
+        tagAnnotation: 'Release v%s',
+        buildCommand: 'grunt build'
+      }
     }
   });
 
   // Load the plugins
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-release-it');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify', 'concat']);
+  grunt.registerTask('default', ['release-it']);
+  grunt.registerTask('build', ['uglify', 'concat']);
 
 };
