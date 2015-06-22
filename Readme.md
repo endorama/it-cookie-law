@@ -1,11 +1,11 @@
 
-= IT Cookie Law Banner
+# IT Cookie Law Banner
 
 Banner for appliance to the European Cookie Law ( in particular for Italy )
 
 Demo: Have a look at `example.html` for a usage example.
 
-== How to use it
+## How to use it
 
 Include the main js file in the HTML page:
 
@@ -19,7 +19,7 @@ the preference cookie is not found.
 To link to the extensive information about the cookie policy, you should change
 the default `moreLink` options. See next chapter.
 
-== Configuration
+## Configuration
 
 To update default configuration define a global object called `cookieLawOptions`:
 
