@@ -37,7 +37,7 @@
   }, false);
 
   function doNotProfileIsNotPresent () {
-    return !(!!docCookies.getItem('doNotProfile'));
+    return !(!!window.docCookies.getItem('doNotProfile'));
   }
 
   function setProfileCookie () {
@@ -50,7 +50,7 @@
       expirationDate = new Date().setYear(new Date().getFullYear() + 1);
     }
     // save cookie
-    docCookies.setItem('doNotProfile', 0, new Date(expirationDate));
+    window.docCookies.setItem('doNotProfile', 0, new Date(expirationDate));
   }
   
 })(window, document); 
