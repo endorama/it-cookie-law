@@ -1,11 +1,15 @@
 /**
  * it-cookie-law
  * 
- * v0.0.2 - 2015-06-22
+ * v0.1.0 - 2015-06-22
  * Author : Edoardo Tenani
  * License: MIT
+ * 
+ * docCookies is released under GPL 3.0
+ * https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
+ * http://www.gnu.org/licenses/gpl-3.0-standalone.html
  */
-(function () {
+(function (window) {
   
   /*\
   |*|
@@ -70,8 +74,9 @@
       return aKeys;
     }
   };
+  window.docCookies = docCookies;
   
-})(); 
+})(window); 
 
 
 (function (window, document) {
@@ -248,7 +253,7 @@
   }, false);
 
   function doNotProfileIsNotPresent () {
-    return !(!!docCookies.getItem('doNotProfile'));
+    return !(!!window.docCookies.getItem('doNotProfile'));
   }
 
   function setProfileCookie () {
@@ -261,7 +266,7 @@
       expirationDate = new Date().setYear(new Date().getFullYear() + 1);
     }
     // save cookie
-    docCookies.setItem('doNotProfile', 0, new Date(expirationDate));
+    window.docCookies.setItem('doNotProfile', 0, new Date(expirationDate));
   }
   
 })(window, document); 

@@ -1,6 +1,6 @@
 {
   "name": "it-cookie-law",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Banner for appliance to the European Cookie Law ( in particular for Italy )",
   "main": "dist/it-cookie-law.js",
   "private": true,
