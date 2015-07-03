@@ -10,7 +10,7 @@ Demo: Have a look at `example.html` for a usage example.
 Include the main js file in the HTML page:
 
 ```html
-<script type="text/javascript" src="dist/it-cookies-law.js"></script>
+<script type="text/javascript" src="dist/it-cookie-law.js"></script>
 ```
 
 The script will automatically add a div with id `cookie-law` to the page if 
