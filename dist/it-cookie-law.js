@@ -1,7 +1,7 @@
 /**
  * it-cookie-law
  * 
- * v0.1.3 - 2015-06-22
+ * v0.1.4 - 2015-07-03
  * Author : Edoardo Tenani
  * License: MIT
  * 
@@ -263,7 +263,7 @@
       expirationDate = window.cookieLawOptions.cookieDuration;
     }
     else {
-      expirationDate = new Date().setYear(new Date().getFullYear() + 1);
+      expirationDate = new Date(new Date().setYear(new Date().getFullYear() + 1));
     }
     // save cookie
     window.docCookies.setItem('doNotProfile', 0, new Date(expirationDate));
