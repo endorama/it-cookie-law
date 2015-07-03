@@ -5,8 +5,7 @@
   "main": "dist/it-cookie-law.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "grunt release-it"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
