@@ -26,7 +26,6 @@ To update default configuration define a global object called `cookieLawOptions`
 ```html
 <script type="text/javascript">
   var cookieLawOptions = {
-    cookieDuration: 60*60*24*365, // one year
     banner: {
       content: 'Test',
       moreLink: 'https://en.wikipedia.org/wiki/HTTP_cookie'
@@ -39,7 +38,8 @@ These are the default options:
 
 ```javascript
 defaults = {
-  cookieDuration: 31536000, // one year
+  // default is one year lifetime, must be a Date
+  cookieDuration: new Date(new Date().setYear(new Date().getFullYear() + 1)), // one year
   banner: {
     content: 'Questo sito utilizza cookie per inviarti pubblicità e servizi in linea con le tue preferenze. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie {{clicca qui}}. Chiudendo questo banner, scorrendo questa pagina o cliccando qualunque suo elemento acconsenti all\'uso dei cookie.',
     moreLink: '',
