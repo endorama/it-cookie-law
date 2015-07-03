@@ -47,7 +47,7 @@
       expirationDate = window.cookieLawOptions.cookieDuration;
     }
     else {
-      expirationDate = new Date().setYear(new Date().getFullYear() + 1);
+      expirationDate = new Date(new Date().setYear(new Date().getFullYear() + 1));
     }
     // save cookie
     window.docCookies.setItem('doNotProfile', 0, new Date(expirationDate));
