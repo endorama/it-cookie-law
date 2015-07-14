@@ -1,7 +1,7 @@
 /**
  * it-cookie-law
  * 
- * v0.2.0 - 2015-07-14
+ * v0.2.1 - 2015-07-14
  * Author : Edoardo Tenani
  * License: MIT
  * 
@@ -227,7 +227,7 @@
 
 (function (window, document) {
   
-  window.currentCookieBanner;
+  window.currentCookieBanner = null;
 
   if (doNotProfileIsNotPresent()) {
     window.currentCookieBanner = new CookieBanner(window.cookieLawOptions);
