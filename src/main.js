@@ -1,6 +1,6 @@
 (function (window, document) {
   
-  window.currentCookieBanner;
+  window.currentCookieBanner = null;
 
   if (doNotProfileIsNotPresent()) {
     window.currentCookieBanner = new CookieBanner(window.cookieLawOptions);
