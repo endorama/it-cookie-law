@@ -113,6 +113,17 @@
 
   CookieBanner.prototype.show = function show () {};
 
+  CookieBanner.prototype.content = function (content, moreLink) {
+    if (typeof content !== 'undefined' &&  typeof moreLink !== 'undefined') {
+      console.log('asd')
+      console.log(generateContent(content, moreLink));
+      this.element.childNodes[0].innerHTML = generateContent(content, moreLink);
+    }
+    else {
+      return this.element.childNodes[0].innerHTML;
+    }
+  };
+
   ////////////////////////////////////////////////////////////////////////////
 
   function generateContent(content, moreLink) {
