@@ -1,7 +1,7 @@
 /**
  * it-cookie-law
  * 
- * v0.1.4 - 2015-07-03
+ * v0.2.0 - 2015-07-14
  * Author : Edoardo Tenani
  * License: MIT
  * 
@@ -194,6 +194,17 @@
 
   CookieBanner.prototype.show = function show () {};
 
+  CookieBanner.prototype.content = function (content, moreLink) {
+    if (typeof content !== 'undefined' &&  typeof moreLink !== 'undefined') {
+      console.log('asd')
+      console.log(generateContent(content, moreLink));
+      this.element.childNodes[0].innerHTML = generateContent(content, moreLink);
+    }
+    else {
+      return this.element.childNodes[0].innerHTML;
+    }
+  };
+
   ////////////////////////////////////////////////////////////////////////////
 
   function generateContent(content, moreLink) {
@@ -216,12 +227,12 @@
 
 (function (window, document) {
   
-  var banner;
+  window.currentCookieBanner;
 
   if (doNotProfileIsNotPresent()) {
-    banner = new CookieBanner(window.cookieLawOptions);
-    banner.append();
-    // console.log(banner);
+    window.currentCookieBanner = new CookieBanner(window.cookieLawOptions);
+    window.currentCookieBanner.append();
+    // console.log(window.currentCookieBanner);
   }
 
   /**
@@ -231,11 +242,11 @@
   var actOnScroll = function () {
     // console.log('scroll!');
     // if banner is defined
-    if (banner) {
+    if (window.currentCookieBanner) {
       // remove it
-      banner.remove(); // banner will trigger removeDoNotProfileBanner event
+      window.currentCookieBanner.remove(); // banner will trigger removeDoNotProfileBanner event
       // remove every reference to it
-      banner = null;
+      window.currentCookieBanner = null;
     }
     // if banner is not present
     else {
